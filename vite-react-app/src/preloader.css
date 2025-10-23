@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+.loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0a1d4d; /* Dark blue background */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 9999;
+}
+
+#svg {
+  height: 200px; /* slightly larger */
+  width: 200px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 6px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+@keyframes draw {
+  0% { stroke-dashoffset: 4500; }
+  100% { stroke-dashoffset: 0; }
+}
+
+#svg path.letter {
+  fill: #4da6ff; /* light blue fill */
+  stroke: #fff;
+  stroke-width: 4;
+  transform-origin: center center;
+  animation: pop 2s infinite alternate ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scaleY(1) rotateX(0deg) rotateY(0deg); }
+  50% { transform: scaleY(1.10) rotateX(10deg) rotateY(10deg); }
+  100% { transform: scaleY(1.15) rotateX(-10deg) rotateY(-10deg); }
+}
+
+.name-container {
+  height: 40px; /* increased height for spacing */
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-left: 0; /* centered now */
+  text-align: center;
+}
