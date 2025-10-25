@@ -180,7 +180,7 @@ under the License.
     </request-map>
     <request-map uri="findExampleFeatures">
         <security https="true" auth="true"/>
-        <event type="groovy" path="component://example/src/main/groovy/org/apache/ofbiz/example/FindExampleFeatures.groovy"/>
+        <event type="groovy" path="component://example/groovyScripts/FindExampleFeatures.groovy"/>
         <response name="success" type="view" value="ajaxAutocompleteOptions"/>
         <response name="error" type="view" value="ajaxAutocompleteOptions"/>
     </request-map>
@@ -245,9 +245,7 @@ under the License.
         <security https="true" auth="true"/>
         <response name="success" type="view" value="ExampleReact"/>
     </request-map>
- <request-map uri="ReactExample">
-    <response name="success" type="view" value="ReactExample"/>
-</request-map>
+
     <!-- end of request mappings -->
 
     <!-- View Mappings -->
@@ -275,8 +273,8 @@ under the License.
 
     <!-- ajax view mappings -->
     <view-map name="findExampleAjax" type="screen" page="component://example/widget/example/ExampleAjaxScreens.xml#AjaxExample"/>
-    <view-map name="ListExampleFormOnly" type="screen" page="component://example/widget/example/ExampleAjaxScreens.xml#ListExampleFormOnly" auth="false"/>
-    <view-map name="CreateExampleFormOnly" type="screen" page="component://example/widget/example/ExampleAjaxScreens.xml#CreateExampleFormOnly" auth="false"/>
+    <view-map name="ListExampleFormOnly" type="screen" page="component://example/widget/example/ExampleAjaxScreens.xml#ListExampleFormOnly"/>
+    <view-map name="CreateExampleFormOnly" type="screen" page="component://example/widget/example/ExampleAjaxScreens.xml#CreateExampleFormOnly"/>
     <view-map name="printExampleFOPFonts" type="screenfop" page="component://example/widget/example/FormWidgetExampleScreens.xml#printExampleFOPFonts" content-type="application/pdf"  encoding="none"/>
 
     <view-map name="ExampleGeoLocationPointSet1" type="screen" page="component://example/widget/example/ExampleScreens.xml#ExampleGeoLocationPointSet1"/>
@@ -318,6 +316,4 @@ under the License.
     <view-map name="ExampleReact" type="screen" page="component://example/widget/example/ExampleReactScreens.xml#ReactExample"/>
 
     <!-- end of view mappings -->
-<view-map name="ReactExample" type="screen" page="component://example/webapp/example/ReactExample.ftl"/>
-
 </site-conf>
